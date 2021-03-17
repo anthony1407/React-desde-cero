@@ -17,7 +17,7 @@ const App=()=> (
   </div>
 </div>
   <div className="ed-grid m-grid-3">
-    <Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos />
+    <Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos /><Cursos />
   </div>
   </>
 )
