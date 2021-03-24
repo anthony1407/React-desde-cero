@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from "./App";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from "./components/App"
 
 
-// import App from './App';
+// import App from './App'
 const root=document.getElementById("root")
 // const elemento=React.createElement(componente, propiedades, hijos)
-// const elemento=React.createElement("h1", {className: "saludo"}, "Hola mundo");
+// const elemento=React.createElement("h1", {className: "saludo"}, "Hola mundo")
 // const elemento=(
 //   <h1 className="saludo">
 //       Hola

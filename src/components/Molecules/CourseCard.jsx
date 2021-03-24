@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 // const mayorEdad=(edad)=> edad > 18
 // const personas={"nombre": "Anthony", "apellido": "Agelvis", "edad": 20}
 // const curso={
@@ -15,7 +16,7 @@ import PropTypes from "prop-types";
 //     </div>
 //     <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
 //         <h3></h3>
-     
+
 //       <div className="s-mb-2 s-main-center">
 //         <div className="card__teacher s-cross-center">
 //           <div className="card__avatar s-mr-1">
@@ -32,43 +33,45 @@ import PropTypes from "prop-types";
 //     </div>
 //   </article>
 // )
-const Cursos=({image,imageTwo,title,profesor,price})=>(
-    <article className="card">
+const CourseCard = ({ id, image, imageTwo, title, professor, price }) => (
+  <article className="card">
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl" id={title}>
-      <img src={image} alt={title}/>
+      <Link to={`/cursos/${id}`}>
+        <img src={image} alt={title} />
+      </Link>
     </div>
     <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-        <h3 className="center">{title}</h3>
-     
+      <h3 className="center">{title}</h3>
+
       <div className="s-mb-2 s-main-center">
         <div className="card__teacher s-cross-center">
           <div className="card__avatar s-mr-1">
             <div className="circle img-container">
-              <img src={imageTwo} alt={profesor}/>
+              <img src={imageTwo} alt={professor} />
             </div>
           </div>
-          <span className="small">{profesor}</span>
+          <span className="small">{professor}</span>
         </div>
       </div>
       <div className="s-main-center">
-        <a className="button--ghost-alert button--tiny" href="#">{`$ ${price}`}</a>
+        <a className="button--ghost-alert button--tiny" href="https://ed.team/">{`$ ${price}`}</a>
       </div>
     </div>
   </article>
 )
-Cursos.prototype={
+CourseCard.prototype = {
   title: PropTypes.string,
   image: PropTypes.string,
   imageTwo: PropTypes.string,
-  profesor: PropTypes.string,
+  professor: PropTypes.string,
   price: PropTypes.number
 }
-Cursos.defaultProps={
+CourseCard.defaultProps = {
   title: "No hay titulo",
   image: "https://concepto.de/wp-content/uploads/2018/08/Londres-e1533855310803.jpg",
   imageTwo: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Taipei_Skyline_2015.jpg",
-  profesor: "",
+  professor: "",
   price: "--"
 }
 
-export default Cursos;
+export default CourseCard
