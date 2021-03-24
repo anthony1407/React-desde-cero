@@ -8,6 +8,7 @@ import MainMenu from './Organisms/Header'
 import History from './Pages/History'
 import Form from './Pages/Form'
 import Home from './Pages/Home'
+import Users from './Pages/Users'
 
 
 const App = () => (
@@ -43,6 +44,7 @@ const App = () => (
         <Route path="/historial/:valor" component={History} />
         <Route path="/historial" component={History} />
         <Route path="/cursos" component={CoursesGrid} />
+        <Route path="/usuarios" component={ () => <Users />} />
         <Route path="/formulario" exact component={() => <Form name="Registro" />} />
         <Route component={() => (
           <div
